@@ -49,6 +49,7 @@ jobs:
         needs: build
         permissions:
             id-token: write
+            pages: write
         if: github.ref_name == 'preview' || github.ref_name == 'automation'
         steps:
             - uses: actions/download-artifact@v4
